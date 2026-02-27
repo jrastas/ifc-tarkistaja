@@ -1,6 +1,6 @@
 fastapi==0.133.1
 uvicorn[standard]==0.41.0
-python-multipart==0.0.18
+python-multipart==0.0.22
 ifcopenshell==0.8.4.post1
 pydantic==2.12.5
 python-dotenv==1.0.0
