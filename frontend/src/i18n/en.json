@@ -1,0 +1,100 @@
+{
+  "common": {
+    "upload": "Upload IFC File",
+    "upload_hint": "Drag and drop or click to select",
+    "validate": "Validate",
+    "export_pdf": "Export PDF",
+    "required": "Required",
+    "optional": "Optional",
+    "all_fields": "All",
+    "required_only": "Required",
+    "loading": "Loading...",
+    "validating": "Validating...",
+    "error": "Error",
+    "reset": "Validate Another File",
+    "show": "Show",
+    "categories": "Categories",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "header": {
+    "title": "IFC Checker",
+    "subtitle": "Building Permit BIM Compliance Validation"
+  },
+  "results": {
+    "title": "Validation Results",
+    "overall_compliance": "Overall Compliance",
+    "required_compliance": "Required Fields",
+    "all_fields": "All Fields",
+    "required_fields": "Required",
+    "file": "File",
+    "schema": "Schema",
+    "field": "Field",
+    "status": "Status",
+    "value": "Value",
+    "errors": "Errors",
+    "errors_count": "errors",
+    "warnings": "Warnings",
+    "warnings_count": "warnings",
+    "no_errors": "No errors",
+    "no_warnings": "No warnings",
+    "no_issues": "No errors or warnings",
+    "and_more": "and {{count}} more"
+  },
+  "status": {
+    "valid": "Valid",
+    "missing": "Missing",
+    "invalid": "Invalid",
+    "warning": "Warning"
+  },
+  "footer": {
+    "version": "Version",
+    "description": "Validates IFC 4.3.2.0 files against Finnish building permit requirements"
+  },
+  "upload": {
+    "select_file": "Select file",
+    "select_different": "Select different file",
+    "drop_here": "Drop file here"
+  },
+  "notifications": {
+    "validation_complete": "Validation complete",
+    "pdf_exported": "PDF exported"
+  },
+  "categories": {
+    "rakennuksen_tietomalli": "Building Information Model",
+    "suunnittelija": "Designer",
+    "rakennuspaikka": "Building Site",
+    "rakennus": "Building",
+    "huoneisto": "Apartment",
+    "huone": "Room",
+    "tila": "Space",
+    "kerros": "Storey",
+    "ulkoseinat": "External Walls",
+    "rakennusosat": "Building Components",
+    "rakennuskohde": "Building Project",
+    "rakennuskohteen_muutos": "Building Change",
+    "rakentamistoimenpide": "Construction Action",
+    "rakennuksen_osa": "Building Part",
+    "rakennuksen_osan_varuste": "Building Part Equipment",
+    "rakennuksen_kayttotiedot": "Building Usage Information",
+    "kayttotarkoitus": "Purpose of Use",
+    "sijainti": "Location",
+    "energiatiedot": "Energy Information",
+    "materiaalitiedot": "Material Information",
+    "talotekniikkatiedot": "Building Services Information",
+    "ulkokuoren_tiedot": "Building Envelope Information",
+    "sisatilojen_tiedot": "Interior Space Information",
+    "seina": "Wall",
+    "ovi": "Door",
+    "ikkuna": "Window",
+    "katto": "Roof",
+    "laatta": "Slab",
+    "portaikko": "Staircase",
+    "sisaankaynti": "Entrance",
+    "hissi": "Elevator",
+    "vaestonsuoja": "Shelter",
+    "julkisivun_rakennusaine": "Facade Material",
+    "sisaverkko": "Internal Network",
+    "latauspiste": "Charging Point"
+  }
+}

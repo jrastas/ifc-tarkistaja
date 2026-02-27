@@ -1,0 +1,147 @@
+MIT License
+
+Copyright (c) 2024-2026 Jaakko Rastas and IFC Tarkistaja Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This software incorporates components under the following licenses:
+
+### LGPL-3.0 Licensed Components
+
+**IfcOpenShell** - IFC parsing library
+- Copyright (c) IfcOpenShell Contributors
+- License: GNU Lesser General Public License v3.0 (LGPL-3.0)
+- Source: https://github.com/IfcOpenShell/IfcOpenShell
+
+This application uses IfcOpenShell as a dynamically linked library. The source
+code for IfcOpenShell is available at the URL above. You may replace the
+IfcOpenShell library with any compatible version.
+
+---
+
+### Apache License 2.0 Licensed Components
+
+**TypeScript** - JavaScript with syntax for types
+- Copyright (c) Microsoft Corporation
+- License: Apache License 2.0
+- Source: https://github.com/microsoft/TypeScript
+
+**python-multipart** - Streaming multipart parser for Python
+- Copyright (c) Andrew Dunham
+- License: Apache License 2.0
+- Source: https://github.com/andrew-d/python-multipart
+
+---
+
+### Mozilla Public License 2.0 Licensed Components
+
+**web-ifc** - WebAssembly IFC parser
+- Copyright (c) IFC.js Contributors
+- License: Mozilla Public License 2.0 (MPL-2.0)
+- Source: https://github.com/IFCjs/web-ifc
+
+This application uses web-ifc as a binary/WASM module without modifications.
+The MPL-2.0 is a file-level copyleft license; since no modifications have been
+made to web-ifc source files, no source disclosure is required for this
+application's code.
+
+---
+
+### MIT/Apache-2.0 Dual Licensed Components
+
+**Tauri** - Cross-platform app framework
+- Copyright (c) 2017-2024 Tauri Contributors
+- License: MIT OR Apache-2.0 (at your option)
+- Source: https://github.com/tauri-apps/tauri
+
+**Tauri Plugins** (shell, dialog, notification, fs)
+- Copyright (c) 2017-2024 Tauri Contributors
+- License: MIT OR Apache-2.0 (at your option)
+- Source: https://github.com/tauri-apps/plugins-workspace
+
+**serde / serde_json** - Serialization framework for Rust
+- Copyright (c) serde-rs contributors
+- License: MIT OR Apache-2.0 (at your option)
+- Source: https://github.com/serde-rs/serde
+
+---
+
+### BSD Licensed Components
+
+**Uvicorn** - ASGI web server
+- Copyright (c) Encode OSS Ltd.
+- License: BSD-3-Clause
+- Source: https://github.com/encode/uvicorn
+
+**python-dotenv** - Environment variable management
+- Copyright (c) Saurabh Kumar
+- License: BSD-3-Clause
+- Source: https://github.com/theskumar/python-dotenv
+
+**ReportLab** - PDF generation library
+- Copyright (c) ReportLab Europe Ltd.
+- License: BSD
+- Source: https://www.reportlab.com/
+
+---
+
+### MIT Licensed Components (Primary Dependencies)
+
+The following major components are licensed under the MIT License:
+
+- **React / React DOM** - Copyright (c) Meta Platforms, Inc.
+- **Vite** - Copyright (c) Evan You and Vite contributors
+- **Three.js** - Copyright (c) 2010-2024 three.js authors
+- **FastAPI** - Copyright (c) Sebastián Ramírez
+- **Pydantic** - Copyright (c) Samuel Colvin and other contributors
+- **Zustand** - Copyright (c) Paul Henschel
+- **i18next** - Copyright (c) i18next contributors
+- **Tailwind CSS** - Copyright (c) Tailwind Labs, Inc.
+- **Tokio** - Copyright (c) Tokio contributors
+- **@thatopen/components** - Copyright (c) That Open Company
+- **@thatopen/fragments** - Copyright (c) That Open Company
+- **react-resizable-panels** - Copyright (c) Brian Vaughn
+- **react-dropzone** - Copyright (c) Param Aggarwal
+- **Axios** - Copyright (c) Matt Zabriskie
+- **PyYAML** - Copyright (c) The PyYAML Project
+
+---
+
+### ISC Licensed Components
+
+**Lucide React** - Icon library
+- Copyright (c) Lucide Contributors
+- License: ISC (functionally equivalent to MIT)
+- Source: https://github.com/lucide-icons/lucide
+
+---
+
+## Full License Texts
+
+For complete license texts of all dependencies, please refer to:
+- Frontend: `frontend/node_modules/*/LICENSE`
+- Backend: See individual package repositories
+- Rust: `frontend/src-tauri/Cargo.lock` and crate repositories
+
+For a detailed breakdown of all dependencies and their licenses, see
+[licenses-used.md](licenses-used.md).

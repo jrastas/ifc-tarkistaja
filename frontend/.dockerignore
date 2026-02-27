@@ -1,0 +1,33 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Build output
+dist
+build
+
+# Tauri native app (not needed for web Docker build)
+src-tauri
+
+# Development files
+.env.local
+.env.development
+.env.test
+*.log
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Test coverage
+coverage
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore

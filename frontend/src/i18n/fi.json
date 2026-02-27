@@ -1,0 +1,100 @@
+{
+  "common": {
+    "upload": "Lataa IFC-tiedosto",
+    "upload_hint": "Vedä ja pudota tai klikkaa valitaksesi",
+    "validate": "Tarkista",
+    "export_pdf": "Vie PDF",
+    "required": "Pakollinen",
+    "optional": "Valinnainen",
+    "all_fields": "Kaikki",
+    "required_only": "Pakolliset",
+    "loading": "Ladataan...",
+    "validating": "Tarkistetaan...",
+    "error": "Virhe",
+    "reset": "Tarkista toinen tiedosto",
+    "show": "Näytä",
+    "categories": "Kategoriat",
+    "yes": "Kyllä",
+    "no": "Ei"
+  },
+  "header": {
+    "title": "IFC Tarkistaja",
+    "subtitle": "Rakentamisluvan tietomallien vaatimustenmukaisuuden tarkistus"
+  },
+  "results": {
+    "title": "Tarkistuksen tulokset",
+    "overall_compliance": "Kokonaisvaatimustenmukaisuus",
+    "required_compliance": "Pakolliset kentät",
+    "all_fields": "Kaikki kentät",
+    "required_fields": "Pakolliset",
+    "file": "Tiedosto",
+    "schema": "Skeema",
+    "field": "Kenttä",
+    "status": "Tila",
+    "value": "Arvo",
+    "errors": "Virheet",
+    "errors_count": "virhettä",
+    "warnings": "Varoitukset",
+    "warnings_count": "varoitusta",
+    "no_errors": "Ei virheitä",
+    "no_warnings": "Ei varoituksia",
+    "no_issues": "Ei virheitä tai varoituksia",
+    "and_more": "ja {{count}} muuta"
+  },
+  "status": {
+    "valid": "Kunnossa",
+    "missing": "Puuttuu",
+    "invalid": "Virheellinen",
+    "warning": "Huomio"
+  },
+  "footer": {
+    "version": "Versio",
+    "description": "Yksinkertainen IFC 4.3 tarkistaja, jonka tarkoituksena on tarkistaa, että tiedostot sisältävät asetuksen 1340/2025 liitteiden mukaiset vähimmäistiedot"
+  },
+  "upload": {
+    "select_file": "Valitse tiedosto",
+    "select_different": "Valitse toinen tiedosto",
+    "drop_here": "Pudota tiedosto tähän"
+  },
+  "notifications": {
+    "validation_complete": "Tarkistus valmis",
+    "pdf_exported": "PDF tallennettu"
+  },
+  "categories": {
+    "rakennuksen_tietomalli": "Rakennuksen tietomalli",
+    "suunnittelija": "Suunnittelija",
+    "rakennuspaikka": "Rakennuspaikka",
+    "rakennus": "Rakennus",
+    "huoneisto": "Huoneisto",
+    "huone": "Huone",
+    "tila": "Tila",
+    "kerros": "Kerros",
+    "ulkoseinat": "Ulkoseinät",
+    "rakennusosat": "Rakennusosat",
+    "rakennuskohde": "Rakennuskohde",
+    "rakennuskohteen_muutos": "Rakennuskohteen muutos",
+    "rakentamistoimenpide": "Rakentamistoimenpide",
+    "rakennuksen_osa": "Rakennuksen osa",
+    "rakennuksen_osan_varuste": "Rakennuksen osan varuste",
+    "rakennuksen_kayttotiedot": "Rakennuksen käyttötiedot",
+    "kayttotarkoitus": "Käyttötarkoitus",
+    "sijainti": "Sijainti",
+    "energiatiedot": "Energiatiedot",
+    "materiaalitiedot": "Materiaalitiedot",
+    "talotekniikkatiedot": "Talotekniikkatiedot",
+    "ulkokuoren_tiedot": "Ulkokuoren tiedot",
+    "sisatilojen_tiedot": "Sisätilojen tiedot",
+    "seina": "Seinä",
+    "ovi": "Ovi",
+    "ikkuna": "Ikkuna",
+    "katto": "Katto",
+    "laatta": "Laatta",
+    "portaikko": "Portaikko",
+    "sisaankaynti": "Sisäänkäynti",
+    "hissi": "Hissi",
+    "vaestonsuoja": "Väestönsuoja",
+    "julkisivun_rakennusaine": "Julkisivun rakennusaine",
+    "sisaverkko": "Sisäverkko",
+    "latauspiste": "Latauspiste"
+  }
+}

@@ -1,0 +1,197 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+*.cover
+*.log
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Build outputs
+frontend/dist/
+frontend/dist-ssr/
+backend/dist/
+*.tsbuildinfo
+*.vsix
+
+# Rust/Tauri
+frontend/src-tauri/target/
+frontend/src-tauri/Cargo.lock
+*.rs.bk
+
+# Tauri build outputs
+frontend/src-tauri/target/
+frontend/src-tauri/WixTools/
+*.msi
+*.exe
+*.dmg
+*.app
+*.deb
+*.AppImage
+
+# Swift/iOS
+IFCTarkistaja.swiftpm/.build/
+IFCTarkistaja.swiftpm/Build/
+IFCTarkistaja.swiftpm/DerivedData/
+*.xcodeproj
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserdatad
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+.swiftpm/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+*.cover
+.hypothesis/
+.tox/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~*
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Samples
+samples/
+
+# Analysis logs
+analysis_*.txt
+
+# Claude Code workspace files
+.claude/
+tmpclaude-*-cwd
+
+# Build logs
+build-log.txt
+
+# Temporary plan files
+*claudeplan.md
+
+# Debug and test scripts (local development)
+analyze_*.py
+debug_*.py
+test_*.py
+verify_*.py
+final_verification.py
+
+# Analysis and dump files
+*_dump.txt
+*_detailed.txt
+*full_dump.txt
+*_ANALYSIS.md
+*_SUMMARY.md
+*_STATUS.md
+
+# Gemini/Antigravity workspace
+.gemini/
+
+# Debug analysis outputs
+door_*.txt
+entrance_*.txt
+nul
+
+# Generated reports
+ifc_report_*.pdf

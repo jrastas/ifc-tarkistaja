@@ -1,0 +1,38 @@
+# Virtual environment
+venv
+.venv
+env
+.env
+
+# Python cache
+__pycache__
+*.py[cod]
+*$py.class
+.pytest_cache
+
+# Test coverage
+.coverage
+htmlcov
+coverage.xml
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Tests (not needed in production image)
+tests
+conftest.py
+pytest.ini

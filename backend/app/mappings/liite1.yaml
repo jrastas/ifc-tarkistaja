@@ -1,0 +1,620 @@
+# Liite 1: Pääpiirustustasoisten suunnitelma- ja toteumamallien ydintiedot
+# x = pakollinen (required), r = merkitään myös rakennuspaikan tietomallissa
+# Names aligned with Ryhti raklu data model v1.1.0
+
+categories:
+  rakennuksen_tietomalli:
+    name_fi: "Rakennuksen tietomalli"
+    name_en: "Building Information Model"
+    ryhti_class: "RakennuksenTietomalli"
+    icon: "file-code"
+    ifc_entity: "IfcProject"
+    fields:
+      - id: "rakennuksentietomallinlaji"
+        name_fi: "Rakennuksen tietomallin laji"
+        name_en: "Building Information Model Type"
+        required: true
+        also_in_site_model: true
+        ifc_entity: "IfcBuilding"
+        ifc_property: "Pset_ProjectCommon.ModelType|FI_Kohde.TietomallinLaji"
+        ryhti_property: "rakennuksentietomallinlaji"
+
+  suunnittelija:
+    name_fi: "Suunnittelija"
+    name_en: "Designer"
+    ryhti_class: "Suunnittelija"
+    icon: "user"
+    ifc_entity: "IfcOrganization"
+    fields:
+      - id: "suunnittelijannimi"
+        name_fi: "Suunnittelijan nimi"
+        name_en: "Designer Name"
+        required: true
+        also_in_site_model: true
+        ifc_entity: "IfcBuilding"
+        ifc_property: "IfcPerson.FamilyName|FI_Kohde.VastaavaSuunnittelija"
+        ryhti_property: "suunnittelijannimi"
+      - id: "toiminimi"
+        name_fi: "Toiminimi"
+        name_en: "Company Name"
+        required: true
+        also_in_site_model: true
+        ifc_entity: "IfcBuilding"
+        ifc_property: "IfcOrganization.Name|FI_Kohde.Suunnittelutoimisto"
+        ryhti_property: "toimija"
+
+  rakennuspaikka:
+    name_fi: "Rakennuspaikka"
+    name_en: "Building Site"
+    ryhti_class: "Rakennuspaikka"
+    icon: "map-pin"
+    ifc_entity: "IfcSite"
+    fields:
+      - id: "nimi"
+        name_fi: "Nimi"
+        name_en: "Name"
+        required: true
+        also_in_site_model: true
+        ifc_property: "IfcSite.Name"
+        ryhti_property: "nimi"
+      - id: "kiinteistotunnus"
+        name_fi: "Kiinteistötunnus"
+        name_en: "Property ID"
+        required: true
+        also_in_site_model: true
+        ifc_property: "Pset_SiteCommon.LandTitleNumber|FI_Kiinteistö.Kiinteistötunnus"
+        ryhti_property: "kiinteistotunnus"
+      - id: "katuosoite"
+        name_fi: "Katuosoite"
+        name_en: "Street Address"
+        required: false
+        also_in_site_model: true
+        ifc_property: "FI_Kiinteistö.Katuosoite|FI_Kohde.Katuosoite"
+        ryhti_property: "katuosoite"
+      - id: "maaraalatunnus"
+        name_fi: "Määräalatunnus"
+        name_en: "Parcel ID"
+        required: false
+        also_in_site_model: true
+        ifc_property: "Pset_SiteCommon.ParcelID"
+        ryhti_property: "maaraalatunnus"
+      - id: "osoite"
+        name_fi: "Osoite"
+        name_en: "Address"
+        required: true
+        also_in_site_model: true
+        ifc_entity: "IfcSite"
+        ifc_property: "IfcPostalAddress.AddressLines|FI_Kiinteistö.Katuosoite"
+        ryhti_property: "osoite"
+      - id: "pysyvakaavatunnus"
+        name_fi: "Pysyvä kaavatunnus"
+        name_en: "Permanent Plan ID"
+        required: false
+        also_in_site_model: true
+        ifc_property: "Pset_SiteCommon.PlanID"
+        ryhti_property: "pysyvaKaavatunnus"
+      - id: "kaavatilanne"
+        name_fi: "Kaavatilanne"
+        name_en: "Planning Status"
+        required: true
+        also_in_site_model: true
+        ifc_property: "Pset_SiteCommon.PlanningStatus|FI_Kiinteistö.Kaavatilanne"
+        ryhti_property: "kaavatilanne"
+
+  rakentamistoimenpide:
+    name_fi: "Rakentamistoimenpide"
+    name_en: "Construction Action"
+    ryhti_class: "Rakentamistoimenpide"
+    icon: "hammer"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "rakentamistoimenpiteenlaji"
+        name_fi: "Rakentamistoimenpiteen laji"
+        name_en: "Construction Action Type"
+        required: true
+        ifc_property: "Pset_ProjectCommon.ConstructionActionType|FI_Kohde.Rakentamistoimenpide"
+        ryhti_property: "rakentamistoimenpiteenlaji"
+      - id: "perusparannus"
+        name_fi: "Perusparannus"
+        name_en: "Major Renovation"
+        required: false
+        ifc_property: "Pset_ProjectCommon.IsMajorRenovation|FI_Kohde.Perusparannus"
+        ryhti_property: "perusparannus"
+      - id: "muutosala"
+        name_fi: "Muutosala"
+        name_en: "Change Area"
+        required: false
+        note: "Laajentaminen, muutos tai perusparannus"
+        ifc_property: "Qto_ProjectBaseQuantities.ChangeArea"
+        ryhti_property: "muutosala"
+      - id: "liiketaloudellinenrakentaminen"
+        name_fi: "Liiketaloudellinen rakentaminen"
+        name_en: "Commercial Construction"
+        required: true
+        value_type: "boolean"
+        ifc_property: "Pset_ProjectCommon.IsCommercial|FI_Kohde.LiiketaloudellinenRakentaminen"
+        ryhti_property: "liiketaloudellinenrakentaminen"
+
+  rakennuskohde:
+    name_fi: "Rakennuskohde"
+    name_en: "Building Project"
+    ryhti_class: "Rakennuskohde"
+    icon: "building-2"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "nimi"
+        name_fi: "Nimi"
+        name_en: "Name"
+        required: true
+        ifc_property: "IfcBuilding.Name|FI_Kohde.Nimi"
+        ryhti_property: "nimi"
+      - id: "rakennuskohteenosoite"
+        name_fi: "Rakennuskohteen osoite"
+        name_en: "Building Project Address"
+        required: true
+        ifc_entity: "IfcBuilding"
+        ifc_property: "IfcPostalAddress.AddressLines|FI_Kohde.Katuosoite"
+        ryhti_property: "rakennuskohteenosoite"
+      - id: "valiaikainen"
+        name_fi: "Väliaikainen"
+        name_en: "Temporary"
+        required: false
+        value_type: "boolean"
+        ifc_property: "Pset_BuildingCommon.IsTemporary|FI_Kohde.Väliaikainen"
+        ryhti_property: "valiaikainen"
+      - id: "rakennuskohteenomistaja"
+        name_fi: "Rakennuskohteen omistaja"
+        name_en: "Building Project Owner"
+        required: true
+        ifc_property: "Pset_BuildingCommon.OwnerType|FI_Kohde.Omistajalaji"
+        ryhti_property: "rakennuskohteenomistaja"
+      - id: "verkostoliittymanlaji"
+        name_fi: "Verkostoliittymän laji"
+        name_en: "Network Connection Type"
+        required: false
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.NetworkConnectionTypes"
+        ryhti_property: "verkostoliittymanlaji"
+      - id: "polkupyorapaikkojenmaara"
+        name_fi: "Polkupyöräpaikkojen määrä"
+        name_en: "Bicycle Parking Count"
+        required: true
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.BicycleParkingCount|FI_Kohde.PolkupyöräpaikkojenMäärä"
+        ryhti_property: "polkupyorapaikkojenmaara"
+
+  latauspiste:
+    name_fi: "Latauspiste"
+    name_en: "Charging Point"
+    ryhti_class: "latauspiste"
+    icon: "plug"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "putkitus"
+        name_fi: "Putkitus"
+        name_en: "Conduit"
+        required: true
+        value_type: "boolean"
+        ifc_entity: "IfcSite"
+        ifc_property: "Pset_BuildingCommon.HasChargingConduit|FI_Kiinteistö.LatauspisteidenPutkitus"
+        ryhti_property: "putkitus"
+      - id: "muutjohtoreitit"
+        name_fi: "Muut johtoreitit"
+        name_en: "Other Cable Routes"
+        required: true
+        value_type: "boolean"
+        ifc_entity: "IfcSite"
+        ifc_property: "Pset_BuildingCommon.HasCableRoutes|FI_Kiinteistö.LatauspisteidenMuutJohtoreitit"
+        ryhti_property: "muutjohtoreitit"
+      - id: "esikaapelointi"
+        name_fi: "Esikaapelointi"
+        name_en: "Pre-cabling"
+        required: true
+        value_type: "boolean"
+        ifc_entity: "IfcSite"
+        ifc_property: "Pset_BuildingCommon.HasPreCabling|FI_Kiinteistö.LatauspisteidenEsikaapelointi"
+        ryhti_property: "esikaapelointi"
+      - id: "latauspisteidenmaara"
+        name_fi: "Latauspisteiden määrä"
+        name_en: "Charging Point Count"
+        required: true
+        value_type: "integer"
+        ifc_entity: "IfcSite"
+        ifc_property: "Pset_BuildingCommon.ChargingPointCount|FI_Kiinteistö.LatauspisteidenMäärä"
+        ryhti_property: "latauspisteidenmaara"
+
+  rakennus:
+    name_fi: "Rakennus"
+    name_en: "Building"
+    ryhti_class: "Rakennus"
+    icon: "home"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "pysyvarakennustunnus"
+        name_fi: "Pysyvä rakennustunnus"
+        name_en: "Permanent Building ID"
+        required: false
+        note: "Toteumamalli ja muutos"
+        ifc_property: "Pset_BuildingCommon.PermanentID"
+        ryhti_property: "pysyvarakennustunnus"
+
+  rakennuksen_kayttotiedot:
+    name_fi: "Rakennuksen käyttötiedot"
+    name_en: "Building Usage Information"
+    ryhti_class: "RakennuksenKayttotiedot"
+    icon: "users"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "rakennuksensuunniteltukayttajamaara"
+        name_fi: "Rakennuksen suunniteltu käyttäjämäärä"
+        name_en: "Planned Occupancy"
+        required: false
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.OccupancyNumber|FI_Kohde.RakennuksenSuunniteltuKäyttäjämäärä|FI_Kohde.SuunniteltuKäyttäjämäärä"
+        ryhti_property: "rakennuksensuunniteltukayttajamaara"
+      - id: "rakennuksentavoitteellinenkayttoika"
+        name_fi: "Rakennuksen tavoitteellinen käyttöikä"
+        name_en: "Target Service Life"
+        required: false
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.PlannedServiceLife|FI_Kohde.TavoitteellinenKäyttöikä"
+        ryhti_property: "rakennuksentavoitteellinenkayttoika"
+
+  kayttotarkoitus:
+    name_fi: "Käyttötarkoitus"
+    name_en: "Intended Use"
+    ryhti_class: "RakennuksenKayttotiedot"
+    icon: "tag"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "kayttotarkoitus"
+        name_fi: "Käyttötarkoitus"
+        name_en: "Usage Type"
+        required: true
+        ifc_property: "Pset_BuildingCommon.OccupancyType|FI_Kohde.PääasiallinenKäyttötarkoitus"
+        ryhti_property: "kayttotarkoitus"
+
+  materiaalitiedot:
+    name_fi: "Materiaalitiedot"
+    name_en: "Material Information"
+    ryhti_class: "Materiaalitiedot"
+    icon: "layers"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "kantavanrakenteenrakennusaineenlaji"
+        name_fi: "Kantavan rakenteen rakennusaineen laji"
+        name_en: "Structural Material Type"
+        required: true
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.StructuralMaterial|FI_Kohde.RakenteidenRakennusaineMuu"
+        ryhti_property: "kantavanrakenteenrakennusaineenlaji"
+      - id: "rakentamistapa"
+        name_fi: "Rakentamistapa"
+        name_en: "Construction Method"
+        required: true
+        ifc_property: "Pset_BuildingCommon.ConstructionMethod|FI_Kohde.Rakentamistapa"
+        ryhti_property: "rakentamistapa"
+
+  energiatiedot:
+    name_fi: "Energiatiedot"
+    name_en: "Energy Information"
+    ryhti_class: "Energiatiedot"
+    icon: "thermometer"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "lammitysenergialahteenlaji"
+        name_fi: "Lämmitysenergian lähteen laji"
+        name_en: "Heating Energy Source"
+        required: true
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.HeatingSource|FI_Talotekniikka.LämmitysenergianlähdeKaukolämpö|FI_Talotekniikka.LämmitysenergianlähdeMaalämpö|FI_Talotekniikka.LämmitysenergianlähdeSähkö"
+        ryhti_property: "lammitysenergialahteenlaji"
+      - id: "lammitystavanlaji"
+        name_fi: "Lämmitystavan laji"
+        name_en: "Heating Method"
+        required: true
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.HeatingMethod|FI_Talotekniikka.LämmitystapaVesikeskuslämmitys"
+        ryhti_property: "lammitystavanlaji"
+
+  julkisivun_rakennusaine:
+    name_fi: "Julkisivun rakennusaine"
+    name_en: "Facade Material"
+    ryhti_class: "JulkisivunRakennusaine"
+    icon: "square"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "julkisivunrakennusaineenlaji"
+        name_fi: "Julkisivun rakennusaineen laji"
+        name_en: "Facade Material Type"
+        required: true
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.FacadeMaterial|FI_Kohde.JulkisivumateriaaliMuu"
+        ryhti_property: "julkisivunrakennusaineenlaji"
+
+  ulkokuoren_tiedot:
+    name_fi: "Ulkokuoren tiedot"
+    name_en: "Building Envelope Data"
+    ryhti_class: "UlkokuorenTiedot"
+    icon: "box"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "kokonaisala"
+        name_fi: "Kokonaisala"
+        name_en: "Total Area"
+        required: true
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.GrossFloorArea|FI_Kohde.Kokonaisala"
+        ryhti_property: "kokonaisala"
+      - id: "kerrosala"
+        name_fi: "Kerrosala"
+        name_en: "Floor Area"
+        required: true
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.NetFloorArea|FI_Kohde.Kerrosala"
+        ryhti_property: "kerrosala"
+      - id: "rakennusoikeudellinenkerrosala"
+        name_fi: "Rakennusoikeudellinen kerrosala"
+        name_en: "Permitted Floor Area"
+        required: true
+        value_type: "area"
+        ifc_property: "Pset_BuildingCommon.PermittedFloorArea"
+        ryhti_property: "rakennusoikeudellinenkerrosala"
+      - id: "korkeus"
+        name_fi: "Korkeus"
+        name_en: "Height"
+        required: true
+        also_in_site_model: true
+        value_type: "length"
+        ifc_property: "Qto_BuildingBaseQuantities.Height|FI_Kohde.RakennuksenKorkeus"
+        ryhti_property: "korkeus"
+        unit: "m"
+      - id: "kerrosluku"
+        name_fi: "Kerrosluku"
+        name_en: "Number of Storeys"
+        required: true
+        also_in_site_model: true
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.NumberOfStoreys|FI_Kohde.RakennuksenKerrosluku" # Note: Pset_ takes precedence
+        ryhti_property: "kerrosluku"
+        unit: "count"
+      - id: "tilavuus"
+        name_fi: "Tilavuus"
+        name_en: "Volume"
+        required: true
+        also_in_site_model: true
+        value_type: "volume"
+        ifc_property: "Qto_BuildingBaseQuantities.GrossVolume|FI_Kohde.RakennuksenTilavuus"
+        ryhti_property: "tilavuus"
+      - id: "suhdemaanpintaan"
+        name_fi: "Suhde maan pintaan"
+        name_en: "Relation to Ground"
+        required: true
+        also_in_site_model: true
+        ifc_property: "Pset_BuildingCommon.RelationToGround|FI_Kohde.RakennuksenSuhdeMaanpintaan"
+        ryhti_property: "suhdemaanpintaan"
+
+  sisatilojen_tiedot:
+    name_fi: "Sisätilojen tiedot"
+    name_en: "Interior Space Data"
+    ryhti_class: "SisatilojenTiedot"
+    icon: "layout"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "huoneistoalayhteensa"
+        name_fi: "Huoneistoala yhteensä"
+        name_en: "Total Apartment Area"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.TotalApartmentArea"
+        ryhti_property: "huoneistoalayhteensa"
+      - id: "kellariala"
+        name_fi: "Kellariala"
+        name_en: "Basement Area"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.BasementArea"
+        ryhti_property: "kellariala"
+      - id: "ullakkoala"
+        name_fi: "Ullakkoala"
+        name_en: "Attic Area"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.AtticArea"
+        ryhti_property: "ullakkoala"
+
+  talotekniikkatiedot:
+    name_fi: "Talotekniikkatiedot"
+    name_en: "Building Systems Information"
+    ryhti_class: "Talotekniikkatiedot"
+    icon: "puzzle"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "jaahdytystavanlaji"
+        name_fi: "Jäähdytystavan laji"
+        name_en: "Cooling Method"
+        required: true
+        ifc_property: "Pset_BuildingCommon.CoolingMethod|FI_Talotekniikka.Jäähdytystapa"
+        ryhti_property: "jaahdytystavanlaji"
+      - id: "ilmanvaihtotavanlaji"
+        name_fi: "Ilmanvaihtotavan laji"
+        name_en: "Ventilation Method"
+        required: true
+        ifc_property: "Pset_BuildingCommon.VentilationMethod|FI_Talotekniikka.Ilmanvaihtotapa"
+        ryhti_property: "ilmanvaihtotavanlaji"
+      - id: "talousvedenlaji"
+        name_fi: "Talousveden laji"
+        name_en: "Water Supply Type"
+        required: true
+        ifc_property: "Pset_BuildingCommon.WaterSupplyType|FI_Talotekniikka.TalousvedenLaji"
+        ryhti_property: "talousvedenlaji"
+      - id: "viemarointitavanlaji"
+        name_fi: "Jätevesien käsittelyn laji"
+        name_en: "Wastewater Treatment Type"
+        required: true
+        ifc_property: "Pset_BuildingCommon.WastewaterType|FI_Talotekniikka.JätevesienKäsittelytapa"
+        ryhti_property: "viemarointitavanlaji"
+      - id: "paloluokka"
+        name_fi: "Paloluokka"
+        name_en: "Fire Rating"
+        required: true
+        also_in_site_model: true
+        ifc_property: "Pset_BuildingCommon.FireRating|FI_Kohde.Paloluokka"
+        ryhti_property: "paloluokka"
+      - id: "energiatehokkuusluokka"
+        name_fi: "Energiatehokkuusluokka"
+        name_en: "Energy Efficiency Class"
+        required: false
+        ifc_property: "Pset_BuildingCommon.EnergyRating|FI_Kohde.Energiatehokkuusluokka"
+        ryhti_property: "energiatehokkuusluokka"
+      - id: "energiatehokkuusluokanalaindeksi"
+        name_fi: "Energiatehokkuusluokan alaindeksi"
+        name_en: "Energy Efficiency Sub-index"
+        required: false
+        ifc_property: "Pset_BuildingCommon.EnergyRatingSubIndex|FI_Kohde.EnergiatehokkuusluokanAlaindeksi"
+        ryhti_property: "energiatehokkuusluokanalaindeksi"
+
+  rakennuksen_osa:
+    name_fi: "Rakennuksen osa"
+    name_en: "Building Part"
+    ryhti_class: "RakennuksenOsa"
+    icon: "box"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "kokoontumistilanhenkilomaara"
+        name_fi: "Kokoontumistilan henkilömäärä"
+        name_en: "Assembly Space Capacity"
+        required: false
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.AssemblyCapacity"
+        ryhti_property: "kokoontumistilanhenkilomaara"
+      - id: "rakennuksenosatunnus"
+        name_fi: "Rakennuksen osatunnus"
+        name_en: "Building Part ID"
+        required: false
+        ifc_property: "Pset_BuildingCommon.BuildingPartID"
+        ryhti_property: "rakennuksenosatunnus"
+      - id: "rakennuksenosittelunperuste"
+        name_fi: "Rakennuksen osittelun peruste"
+        name_en: "Building Division Basis"
+        required: false
+        ifc_property: "Pset_BuildingCommon.DivisionBasis"
+        ryhti_property: "rakennuksenosittelunperuste"
+
+  rakennuksen_osan_varuste:
+    name_fi: "Rakennuksen osan varuste"
+    name_en: "Building Part Equipment"
+    ryhti_class: "RakennuksenOsanVaruste"
+    icon: "wrench"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "varusteenlaji"
+        name_fi: "Varusteen laji"
+        name_en: "Equipment Type"
+        required: false
+        multiple: true
+        ifc_property: "Pset_BuildingCommon.EquipmentTypes"
+        ryhti_property: "varusteenlaji"
+
+  sisaverkko:
+    name_fi: "Sisäverkko"
+    name_en: "Internal Network"
+    ryhti_class: "sisaverkko"
+    icon: "wifi"
+    ifc_entity: "IfcBuilding"
+    fields:
+      - id: "yleiskaapeloinninoptinenkaapelointi"
+        name_fi: "Yleiskaapeloinnin optinen kaapelointi"
+        name_en: "Optical Cabling"
+        required: true
+        also_in_site_model: false
+        value_type: "boolean"
+        note: "Uusi rakennus ja muutos"
+        ifc_property: "Pset_BuildingCommon.HasOpticalCabling|FI_Talotekniikka.OptinenKaapelointi"
+        ryhti_property: "yleiskaapeloinninoptinenkaapelointi"
+        unit: "boolean"
+      - id: "yleiskaapeloinninparikaapelointi"
+        name_fi: "Yleiskaapeloinnin parikaapelointi"
+        name_en: "Pair Cabling"
+        required: true
+        also_in_site_model: false
+        value_type: "boolean"
+        note: "Uusi rakennus ja muutos"
+        ifc_property: "Pset_BuildingCommon.HasPairCabling|FI_Talotekniikka.Parikaapelointi"
+        ryhti_property: "yleiskaapeloinninparikaapelointi"
+      - id: "antenniverkko"
+        name_fi: "Antenniverkko"
+        name_en: "Antenna Network"
+        required: true
+        also_in_site_model: false
+        note: "Uusi rakennus ja muutos"
+        ifc_property: "Pset_BuildingCommon.HasAntennaNetwork|FI_Talotekniikka.Antenniverkko"
+        ryhti_property: "antenniverkko"
+        unit: "boolean"
+      - id: "olemassaolevavalokuituverkko"
+        name_fi: "Olemassa oleva valokuituverkko"
+        name_en: "Existing Optical Fiber Network"
+        required: false
+        also_in_site_model: false
+        note: "Muutos"
+        ifc_property: "FI_Talotekniikka.OlemassaOlevaValokuituverkko"
+        ryhti_property: "olemassaolevavalokuituverkko"
+        unit: "boolean"
+
+  rakennuskohteen_muutos:
+    name_fi: "Rakennuskohteen muutos"
+    name_en: "Building Project Change"
+    ryhti_class: "RakennuskohteenMuutos"
+    icon: "git-compare"
+    ifc_entity: "IfcBuilding"
+    note: "Täytetään muutoshakemuksissa"
+    fields:
+      - id: "kokonaisalanmuutos"
+        name_fi: "Kokonaisalan muutos"
+        name_en: "Total Area Change"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.GrossFloorAreaChange|FI_Kohde.KokonaisalanMuutos"
+        ryhti_property: "kokonaisalanmuutos"
+      - id: "kerrosalanmuutos"
+        name_fi: "Kerrosalan muutos"
+        name_en: "Floor Area Change"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.NetFloorAreaChange|FI_Kohde.KerrosalanMuutos"
+        ryhti_property: "kerrosalanmuutos"
+      - id: "rakennusoikeudellisenkerrosalanmuutos"
+        name_fi: "Rakennusoikeudellisen kerrosalan muutos"
+        name_en: "Permitted Floor Area Change"
+        required: false
+        value_type: "area"
+        ifc_property: "Pset_BuildingCommon.PermittedFloorAreaChange|FI_Kohde.RakennusoikeudellisenKerrosalanMuutos"
+        ryhti_property: "rakennusoikeudellisenkerrosalanmuutos"
+      - id: "huoneistoalanmuutos"
+        name_fi: "Huoneistoalan muutos"
+        name_en: "Apartment Area Change"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.TotalApartmentAreaChange|FI_Kohde.HuoneistoalanMuutos"
+        ryhti_property: "huoneistoalanmuutos"
+      - id: "kellarialanmuutos"
+        name_fi: "Kellarialan muutos"
+        name_en: "Basement Area Change"
+        required: false
+        value_type: "area"
+        ifc_property: "Qto_BuildingBaseQuantities.BasementAreaChange|FI_Kohde.KellarialanMuutos"
+        ryhti_property: "kellarialanmuutos"
+      - id: "kerrosluvunmuutos"
+        name_fi: "Kerrosluvun muutos"
+        name_en: "Floor Count Change"
+        required: false
+        value_type: "integer"
+        ifc_property: "Pset_BuildingCommon.NumberOfStoreysChange|FI_Kohde.KerrosluvunMuutos"
+        ryhti_property: "kerrosluvunmuutos"
+      - id: "tilavuudenmuutos"
+        name_fi: "Tilavuuden muutos"
+        name_en: "Volume Change"
+        required: false
+        value_type: "volume"
+        ifc_property: "Qto_BuildingBaseQuantities.GrossVolumeChange|FI_Kohde.TilavuudenMuutos"
+        ryhti_property: "tilavuudenmuutos"
