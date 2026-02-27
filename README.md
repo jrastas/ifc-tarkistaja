@@ -11,6 +11,10 @@ A web application that validates IFC 4.3.2.0 files against Finnish building perm
 - **Bilingual UI**: Finnish (default) and English interfaces with localized validation messages
 - **Ryhti Alignment**: Field mappings aligned with Finland's national Ryhti (raklu v1.1.0) data model
 
+## Warning
+
+This is a very badly programmed software and AI was used to assist in it. Please run at your own risk and not in production. This software is intended for educational purposes only. Please contact the maintainer if there are any issues.
+
 ## Quick Start
 
 ### Docker (Recommended)
