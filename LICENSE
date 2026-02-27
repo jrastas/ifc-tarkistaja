@@ -49,40 +49,7 @@ IfcOpenShell library with any compatible version.
 **python-multipart** - Streaming multipart parser for Python
 - Copyright (c) Andrew Dunham
 - License: Apache License 2.0
-- Source: https://github.com/andrew-d/python-multipart
-
----
-
-### Mozilla Public License 2.0 Licensed Components
-
-**web-ifc** - WebAssembly IFC parser
-- Copyright (c) IFC.js Contributors
-- License: Mozilla Public License 2.0 (MPL-2.0)
-- Source: https://github.com/IFCjs/web-ifc
-
-This application uses web-ifc as a binary/WASM module without modifications.
-The MPL-2.0 is a file-level copyleft license; since no modifications have been
-made to web-ifc source files, no source disclosure is required for this
-application's code.
-
----
-
-### MIT/Apache-2.0 Dual Licensed Components
-
-**Tauri** - Cross-platform app framework
-- Copyright (c) 2017-2024 Tauri Contributors
-- License: MIT OR Apache-2.0 (at your option)
-- Source: https://github.com/tauri-apps/tauri
-
-**Tauri Plugins** (shell, dialog, notification, fs)
-- Copyright (c) 2017-2024 Tauri Contributors
-- License: MIT OR Apache-2.0 (at your option)
-- Source: https://github.com/tauri-apps/plugins-workspace
-
-**serde / serde_json** - Serialization framework for Rust
-- Copyright (c) serde-rs contributors
-- License: MIT OR Apache-2.0 (at your option)
-- Source: https://github.com/serde-rs/serde
+- Source: https://github.com/Kludex/python-multipart
 
 ---
 
@@ -111,18 +78,13 @@ The following major components are licensed under the MIT License:
 
 - **React / React DOM** - Copyright (c) Meta Platforms, Inc.
 - **Vite** - Copyright (c) Evan You and Vite contributors
-- **Three.js** - Copyright (c) 2010-2024 three.js authors
 - **FastAPI** - Copyright (c) Sebastián Ramírez
 - **Pydantic** - Copyright (c) Samuel Colvin and other contributors
 - **Zustand** - Copyright (c) Paul Henschel
-- **i18next** - Copyright (c) i18next contributors
+- **i18next / react-i18next** - Copyright (c) i18next contributors
 - **Tailwind CSS** - Copyright (c) Tailwind Labs, Inc.
-- **Tokio** - Copyright (c) Tokio contributors
-- **@thatopen/components** - Copyright (c) That Open Company
-- **@thatopen/fragments** - Copyright (c) That Open Company
-- **react-resizable-panels** - Copyright (c) Brian Vaughn
-- **react-dropzone** - Copyright (c) Param Aggarwal
 - **Axios** - Copyright (c) Matt Zabriskie
+- **react-dropzone** - Copyright (c) Param Aggarwal
 - **PyYAML** - Copyright (c) The PyYAML Project
 
 ---
@@ -141,7 +103,6 @@ The following major components are licensed under the MIT License:
 For complete license texts of all dependencies, please refer to:
 - Frontend: `frontend/node_modules/*/LICENSE`
 - Backend: See individual package repositories
-- Rust: `frontend/src-tauri/Cargo.lock` and crate repositories
 
 For a detailed breakdown of all dependencies and their licenses, see
 [licenses-used.md](licenses-used.md).

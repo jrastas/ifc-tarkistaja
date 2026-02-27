@@ -16,34 +16,20 @@ The following third-party assets are included in this repository and are subject
 
 ### Finnish Government Documents
 
-#### Regulatory Document
-- **File**: `SK suunnitelmamalliasetus.pdf`
-- **Source**: Finnish Ministry of the Environment (Ympäristöministeriö)
-- **Content**: Building permit information model regulation (Suunnitelmamalli asetus)
-- **Usage**: Reference document for Finnish building permit requirements
-- **Note**: Finnish government documents are generally public domain for official use, but redistribution may be subject to terms. This document is included for educational and development reference purposes only.
 
 #### Ryhti Data Model Schema
 - **File**: `Rakentamisen lupapäätösten tietomalli.schema.json`
 - **Source**: Finnish Digital and Population Data Services Agency (Digi- ja väestötietovirasto) via [tietomallit.suomi.fi](https://tietomallit.suomi.fi/model/raklu)
 - **Content**: JSON Schema for Finnish building permit data model (raklu v1.1.0)
 - **Usage**: Reference for Ryhti integration and field alignment
-- **Note**: Public data model published by the Finnish government under CC BY 4.0 or similar open license for interoperability purposes.
+- **Note**: Public data model published by the Finnish government.
 
 ---
 
 ### Sample IFC Files
 
-#### RAVA Sample Files
-- **Files**: 
-  - `samples/RAVA3x5_ARK_Kerrostalo_v1_0.ifc`
-  - `samples/RAVA3x5_ARK_Toimistotalo_v1_0.ifc`
-- **Source**: RAVA (Rakennetun ympäristön valtakunnallinen tietovaranto) test files
-- **Usage**: Testing and validation of IFC parsing against Finnish requirements
-- **Note**: These are sample/test files provided for interoperability testing.
-
 #### Project-Generated Test Files
-- **Files**: 
+- **Files**:
   - `sample.ifc` - Minimal test IFC file
   - `finnish_example_house.ifc` - Finnish example house with FI property sets
   - `backend/tests/fixtures/sample.ifc` - Test fixture
@@ -55,28 +41,25 @@ The following third-party assets are included in this repository and are subject
 ### Framework Default Assets
 
 #### Vite Assets
-- **Files**: 
-  - `frontend/public/vite.svg`
-  - `frontend/dist/vite.svg`
+- **File**: `frontend/public/vite.svg`
 - **Source**: [Vite](https://vitejs.dev/)
 - **License**: MIT
-- **Note**: Default template assets from Vite. May be replaced with custom branding.
+- **Note**: Default template asset from Vite.
 
 #### React Assets
 - **File**: `frontend/src/assets/react.svg`
 - **Source**: [React](https://react.dev/)
 - **License**: MIT
-- **Note**: Default template asset. May be replaced with custom branding.
+- **Note**: Default template asset from React/Vite scaffolding.
 
 ---
 
-### Application Icons
+## Removed Assets
 
-#### Tauri App Icons
-- **Location**: `frontend/src-tauri/icons/`
-- **Files**: `32x32.png`, `128x128.png`, `128x128@2x.png`, `icon.icns`, `icon.ico`
-- **License**: MIT (created for this project)
-- **Note**: Custom application icons created for IFC Tarkistaja.
+The following assets were present in earlier versions of this project but have been removed prior to public release due to copyright incompatibility:
+
+- **`frontend/public/favicon.svg`** — AI-generated image, removed as incompatible with open-source distribution
+- **`frontend/src/assets/logo.svg`** — AI-generated image, removed as incompatible with open-source distribution
 
 ---
 
@@ -86,7 +69,7 @@ The following third-party assets are included in this repository and are subject
 
 A review of the source code found no copied code snippets from external sources requiring separate attribution beyond the dependencies listed in [LICENSE](LICENSE) and [licenses-used.md](licenses-used.md).
 
-All application code in `frontend/src/`, `backend/app/`, `python-sidecar/src/`, and `IFCTarkistaja.swiftpm/` is original work licensed under MIT.
+All application code in `frontend/src/` and `backend/app/` is original work licensed under MIT.
 
 ---
 
@@ -100,11 +83,9 @@ This project uses **system fonts** by default. No custom fonts are bundled with 
 
 1. **Finnish Regulatory PDF**: For public distribution, consider linking to the official source rather than bundling the PDF, or verify redistribution terms with the Ministry of the Environment.
 
-2. **RAVA Sample Files**: For production releases, these sample files may be omitted or replaced with properly licensed test files, as they are only needed for development/testing.
+2. **Test IFC Files**: The generated test IFC files (`sample.ifc`, `finnish_example_house.ifc`) are only needed for development and testing. They may be omitted from production deployments.
 
-3. **Framework Assets**: Replace Vite and React SVGs with custom project branding before public release.
-
-4. **LGPL Compliance**: When distributing binaries, ensure IfcOpenShell LGPL compliance as documented in [licenses-used.md](licenses-used.md).
+3. **LGPL Compliance**: When distributing binaries, ensure IfcOpenShell LGPL compliance as documented in [licenses-used.md](licenses-used.md).
 
 ---
 
@@ -116,4 +97,4 @@ For questions about copyright or licensing:
 
 ---
 
-*Last updated: January 2026*
+*Last updated: February 2026*
