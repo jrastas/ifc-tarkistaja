@@ -58,8 +58,8 @@ The following third-party assets are included in this repository and are subject
 
 The following assets were present in earlier versions of this project but have been removed prior to public release due to copyright incompatibility:
 
-- **`frontend/public/favicon.svg`** — AI-generated image, removed as incompatible with open-source distribution
-- **`frontend/src/assets/logo.svg`** — AI-generated image, removed as incompatible with open-source distribution
+- **`frontend/public/favicon.svg`** — AI-generated image for testing purposes, removed as incompatible with open-source distribution
+- **`frontend/src/assets/logo.svg`** — AI-generated image for testing purposes, removed as incompatible with open-source distribution
 
 ---
 
@@ -79,15 +79,6 @@ This project uses **system fonts** by default. No custom fonts are bundled with 
 
 ---
 
-## Recommendations for Distribution
-
-1. **Finnish Regulatory PDF**: For public distribution, consider linking to the official source rather than bundling the PDF, or verify redistribution terms with the Ministry of the Environment.
-
-2. **Test IFC Files**: The generated test IFC files (`sample.ifc`, `finnish_example_house.ifc`) are only needed for development and testing. They may be omitted from production deployments.
-
-3. **LGPL Compliance**: When distributing binaries, ensure IfcOpenShell LGPL compliance as documented in [licenses-used.md](licenses-used.md).
-
----
 
 ## Contact
 
